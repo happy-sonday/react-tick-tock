@@ -1,0 +1,32 @@
+.video-footer{
+    position: relative;
+    color: white;
+    bottom: 150px;
+    padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.uploader{
+    margin-bottom: 6px;
+}
+
+
+.video-record-icon {
+    animation: spinTheRecord infinite 5s linear;
+    height: 50px;
+    filter: invert(1);
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+  }
+  
+
+  @keyframes spinTheRecord {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
