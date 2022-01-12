@@ -2,9 +2,9 @@ import { Favorite, Message, Share, FavoriteBorder } from "@mui/icons-material";
 import React, { useState } from "react";
 import "./VideoSidebar.css";
 
-function VideoSidebar() {
+function VideoSidebar(props) {
   const [Liked, setLiked] = useState(false);
-  const [LikeCount, setLikeCount] = useState(300);
+  const [LikeCount, setLikeCount] = useState(parseInt(props.likeCount));
 
   const onLiked = (e) => {
     if (Liked) {
@@ -23,11 +23,11 @@ function VideoSidebar() {
       </li>
       <li className="sidebutton-wrap">
         <Message />
-        <p className="sidebutton-count">230</p>
+        <p className="sidebutton-count">{props.messageCount}</p>
       </li>
       <li className="sidebutton-wrap">
         <Share />
-        <p className="sidebutton-count">40</p>
+        <p className="sidebutton-count">{props.shareCount}</p>
       </li>
     </ul>
   );
