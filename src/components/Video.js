@@ -18,7 +18,6 @@ function Video() {
     //   setMuted(true);
     // }
   };
-  const onDisplayButton = (params) => {};
 
   return (
     <div className="video">
