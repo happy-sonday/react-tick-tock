@@ -61,10 +61,12 @@ function Video(props) {
         messageCount={100}
         shareCount={50}
       ></VideoSidebar>
+
       <VideoFooter
         uploader={"happy-sonday"}
-        description={"짝사랑하다 화나버린 미노이"}
+        description={"짝사랑하다 화나버린 미노이의 달콤살벌한 벌스"}
       />
+
       {/* <VideoSidebar />*/}
     </div>
   );
