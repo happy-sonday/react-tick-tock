@@ -1,7 +1,7 @@
 .video-footer{
     position: relative;
     color: white;
-    bottom: 150px;
+    bottom: 118px;
     padding: 0 18px;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@
     filter: invert(1);
     position: absolute;
     bottom: 18px;
-    right: 20px;
+    right: 16px;
   }
   
 

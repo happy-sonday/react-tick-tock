@@ -7,7 +7,7 @@ function VideoFooter(props) {
     <div className="video-footer">
       <div className="video-footer-text">
         <h2 className="uploader">@{props.uploader}</h2>
-        <Ticker mode="smooth" offset={100} move={false}>
+        <Ticker mode="smooth" offset={100}>
           {({ index }) => (
             <>
               <p>{props.description}</p>

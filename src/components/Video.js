@@ -28,12 +28,15 @@ function Video(props) {
 
   const onMuted = (event) => {
     setMuted(!Muted);
+
+    // 뮤트 버튼 setTimeout 초기화
     clearTimeout(TimeoutId);
 
     if (Clicked === false) {
       setClicked(true);
     }
 
+    // 뮤트 버튼 show off 장치,2초 동안 입력 이벤트가 없으면 버튼 사라짐
     setTimeoutId(
       setTimeout(() => {
         setClicked(false);
@@ -42,9 +45,9 @@ function Video(props) {
   };
 
   return (
-    <div className="video">
+    <div className="video-wrap">
       <video
-        src="https://v16-webapp.tiktok.com/239d0e399b61076a6eb4e9d881b49349/61df4661/video/tos/alisg/tos-alisg-pve-0037/b66eb9c787cd482796dd78e1fe5439d3/?a=1988&br=1804&bt=902&cd=0%7C0%7C1&ch=0&cr=0&cs=0&cv=1&dr=3&ds=3&er=&ft=XOQ9-3m_nz7ThpD_dlXq&l=202201121520090102451581160436983D&lr=tiktok&mime_type=video_mp4&net=0&pl=0&qs=0&rc=M3JqZGU6ZmYzOTMzODgzNEApaTZkNDk0aGRkNztkPDY0aGdpYXFhcjRnbWFgLS1kLy1zcy9eMjY1YDUtNWEtMDIuMC46Yw%3D%3D&vl=&vr="
+        src={props.url}
         className="video-player"
         onClick={(event) => onMuted(event)}
         muted={Muted}
@@ -57,15 +60,12 @@ function Video(props) {
         onClick={(event) => onMuted(event)}
       />
       <VideoSidebar
-        likeCount={300}
-        messageCount={100}
-        shareCount={50}
+        likeCount={props.likeCount}
+        messageCount={props.messageCount}
+        shareCount={props.shareCount}
       ></VideoSidebar>
 
-      <VideoFooter
-        uploader={"happy-sonday"}
-        description={"짝사랑하다 화나버린 미노이의 달콤살벌한 벌스"}
-      />
+      <VideoFooter uploader={props.uploader} description={props.description} />
 
       {/* <VideoSidebar />*/}
     </div>

@@ -11,12 +11,12 @@ html {
 
 .app-videos {
   position: relative;
-  max-height: 888px;
   border-radius: 20px;
   overflow: scroll;  
-  max-width: 500px;
+  max-width: 320px;
+  max-height: 568px;
   scroll-snap-type: y mandatory;
-  aspect-ratio: 9/16;
+  aspect-ratio: 9 / 16;
   
 }
 
